@@ -1,0 +1,20 @@
+<html lang="en" dir="ltr">
+<!--5. Write a JavaScript function to implement Arrays in reverse order.-->
+  <head>
+    <meta charset="utf-8">
+    <title>Question 5</title>
+  </head>
+  <body>
+    <h4>5. Write a JavaScript function to implement Arrays in reverse order.</h4>
+    <button onclick="start()">Reverse</button>
+    <p id="display"></p>
+    <script>
+      var arr = ["apple","banana","cherry"];
+      document.getElementById("display").innerHTML = arr;
+      function start() {
+        arr.reverse();
+        document.getElementById("display").innerHTML = arr;
+      }
+    </script>
+  </body>
+</html>

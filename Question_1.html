@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--1. Write a JavaScript to display largest of three input numbers. Use prompt to get user input.-->
+<html lang="en" dir="ltr">
+  <head>
+    <title>Question 1</title>
+    <script>
+      function start()
+      {
+        var num=[];
+        for (i=1;i<4;i++)
+        {
+          num[i-1]= prompt("Enter number "+i);
+        }
+        var max= num[0];
+        for (var i=0;i<3;i++)
+        {
+          if (max<num[i])
+          {
+            max= num[i];
+          }
+        }
+        document.getElementById("display").innerHTML = "Largest is "+ max;
+      }
+    </script>
+  </head>
+  <body>
+    <h4>1. Write a JavaScript to display largest of three input numbers. Use prompt to get user input.</h4>
+    <input type="button" value="Click here" onclick="start();">
+    <p id="display"></p>
+  </body>
+</html>

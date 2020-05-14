@@ -1,0 +1,132 @@
+<!--MidTerm Exam-->
+<html>
+  <head>
+    <title>MidTerm Exam</title>
+    <style media="screen">
+      legend {
+        font-size: 20px;
+      }
+    </style>
+    <script type="text/javascript">
+      function findVolume() {
+        v.value= ((4/3)*Math.PI*Math.pow(r.value,3)).toFixed(2);
+      }
+      function inputCheck() {
+        var pin= ["560020.21","560020.22","560020.23","560020.24","560020.25"];
+        var foodtype= document.getElementsByName("foodtype");
+        var count=0;
+        bill.innerHTML= quantity.value*fooditem.options[fooditem.selectedIndex].value;
+        if(!(age.value>=18))
+        {
+          alert("You are not old enough to make online food order");
+          age.focus();
+          age.select();
+          return false;
+        }
+        else if(foodtype[0].checked==false && foodtype[1].checked==false)
+        {
+          alert("Please check your desired food category");
+          return false;
+        }
+        else if(fooditem.options[fooditem.selectedIndex].value=="")
+        {
+          alert("Select a food item");
+          fooditem.focus();
+          return false;
+        }
+        else if(!(quantity.value>=1 && quantity.value<=10))
+        {
+          alert("Item quantity ranges from 1-10");
+          quantity.focus();
+          quantity.select();
+          return false;
+        }
+        else if(pincode.value=="")
+        {
+          alert("Please state your delivery pincode");
+          pincode.focus();
+          pincode.select();
+          return false;
+        }
+        else if(pincode.value!="")
+        {
+          for(i=0;i<pin.length;i++)
+          {
+            if(pincode.value!=pin[i])
+            {
+              count+=1;
+              if(count==5)
+              {
+                alert("Sorry, there is no delivery option at your place at this moment. Your pincode must be 6 digits\(\"560020.21\",\"560020.22\",\"560020.23\",\"560020.24\",\"560020.25\"\)");
+                return false;
+              }
+            }
+          }
+        }
+        var x=confirm("Click \"OK\" if you want to confirm the order.");
+        if(x==true)
+        {
+          document.write("Order successful!!")
+        }
+        else {
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body><br>
+    <fieldset>
+    <legend>Volume of Sphere</legend>
+    Enter Radius: <input type="text" id="r"><br><br>
+    Volume: <input type="text" id="v"><br><br>
+    <input type="button" value="Calculate" onclick="findVolume()">
+  </fieldset><br><br>
+    <fieldset>
+      <legend>Food Ordering Website</legend>
+      <form onsubmit="return inputCheck()">
+      <table>
+        <tr>
+          <td>UID:</td>
+          <td><input type="text" value="6CSE"></td>
+        </tr>
+        <tr>
+          <td>Age:</td>
+          <td><input type="number" id="age" required></td>
+        </tr>
+        <tr>
+          <td>Food Category:</td>
+          <td><input type="checkbox"
+            name="foodtype">VEG
+              <input type="checkbox" name="foodtype">NON-VEG</td>
+        </tr>
+        <tr>
+          <td>Select an item:</td>
+          <td>
+              <select id="fooditem">
+              <option value=""></option>
+              <option value="100">Chiken Biriyani-Rs.100</option>
+              <option value="40">Masala Dosa-Rs.40</option>
+              <option value="50">Veg Fried Rice-Rs.50</option>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Quantity:</td>
+          <td><input type="number" id="quantity"></td>
+        </tr>
+        <tr>
+          <td>Pincode:</td>
+          <td><input type="text" id="pincode"></td>
+        </tr>
+        <tr>
+          <td>Total Bill:</td>
+          <td>Rs. <span id="bill"></span></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="PAY BILL"></td>
+        </tr>
+      </table>
+    </form>
+    </fieldset>
+  </body>
+</html>

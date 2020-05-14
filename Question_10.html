@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--12. Write a JavaScript program which demonstrates the use of all 3 window pop ups alert, conformation and prompt.-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 10</title>
+  </head>
+  <body>
+    <h4>12. Write a JavaScript program which demonstrates the use of all 3 window pop ups alert, conformation and prompt.</h4>
+    <button onclick="send(this)" value="a">Alert Box</button>
+    <button onclick="send(this)" value="c">Confirmation Box</button>
+    <button onclick="send(this)" value="p">Prompt Box</button>
+    <script type="text/javascript">
+      function send(btn)
+      {
+        if(btn.value=="a")
+        {
+          alert("This is Alert dialogue box.")
+        }
+        else if(btn.value=="c")
+        {
+          confirm("This is Confirmation dialogue box.")
+        }
+        else if(btn.value=="p")
+        {
+          prompt("This is Prompt  dialogue box.");
+        }
+      }
+    </script>
+  </body>
+</html>

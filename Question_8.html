@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--10. Write a javascript program to display multiplication table-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h4>10. Write a javascript program to display multiplication table</h4>
+    <input type="button" onclick="start()" value="Click To Begin">
+    <p id="display"></p>
+    <script type="text/javascript">
+      function start()
+      {
+        var x= prompt("Enter number of rows:");
+        var y= prompt("Enter number of columns:");
+        createTable(x,y);
+        function createTable(x,y)
+        {
+          var output= "<table border='1' width='500' cellspacing='0' cellpadding='5'>";
+          for(i=1;i<=x;i++)
+          {
+            output+="<tr>";
+            for(j=1;j<=y;j++)
+            {
+              output+="<td>"+ i*j +"</td>";
+            }
+            output+="</tr>";
+          }
+          output+="</table>";
+          display.innerHTML= output;
+        }
+      }
+    </script>
+  </body>
+</html>

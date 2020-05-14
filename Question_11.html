@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--13. Create a TIP Calculator using java script. Use necessary CSS to make calculator attractive.-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 11</title>
+  </head>
+  <body>
+    <h4>13. Create a TIP Calculator using java script. Use necessary CSS to make calculator attractive.</h4>
+    <center><h2>TIP Calculator</h2></center>
+    <table>
+      <tr>
+        <td>Bill Amount:</td>
+        <td><input type="number" id="bill"></td>
+      </tr>
+      <tr>
+        <td>Quality of Service(QoS):</td>
+        <td><input type="radio"
+          value="1" name="qos">OK
+            <input type="radio" value="3" name="qos">GOOD
+            <input type="radio" value="4" name="qos">EXCELLENT
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" value="TIP Calculator" onclick="begin()"></td>
+      </tr>
+    </table>
+    <script type="text/javascript">
+      function begin()
+      {
+        for(i=0;i<3;i++)
+        {
+          var qos= document.getElementsByName("qos");
+          if(qos[i].checked==true)
+          {
+            var tip= (bill.value*qos[i].value)/20;
+            bill.value= tip;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--6. Create a Simple Calculator using JavaScript where you can perform all sorts of operations in which GUI has to be created 
+by the user in order to perform these operations upon reading input from the keyboard. The operations need to be performed 
+are +, -, *, /, % and clear.-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 6</title>
+    <style media="screen">
+      table {
+        width: 800;
+        margin: auto;
+      }
+      button {
+        width: 50px;
+      }
+    </style>
+    <script type="text/javascript">
+      function send(btn)
+      {
+        if(btn.value=="clear")
+        {
+          display.value="";
+        }
+        else
+        {
+        display.value+=btn.value;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h4>6. Create a Simple Calculator using JavaScript where you can perform all sorts of operations in which GUI has to be created by the user in order to perform these operations upon reading input from the keyboard. The operations need to be performed are +, -, *, /, % and clear.</h4>
+    <table>
+      <tr>
+        <td colspan="3"><input type="text" id="display"></td>
+        <td><button onclick="display.value= eval(display.value)">=</button></td>
+      </tr>
+      <tr>
+        <td><button value="7" onclick="send(this)">7</button></td>
+        <td><button value="8" onclick="send(this)">8</button></td>
+        <td><button value="9" onclick="send(this)">9</button></td>
+        <td><button value="+" onclick="send(this)">+</button></td>
+      </tr>
+      <tr>
+        <td><button value="4" onclick="send(this)">4</button></td>
+        <td><button value="5" onclick="send(this)">5</button></td>
+        <td><button value="6" onclick="send(this)">6</button></td>
+        <td><button value="-" onclick="send(this)">-</button></td>
+      </tr>
+      <tr>
+        <td><button value="1" onclick="send(this)">1</button></td>
+        <td><button value="2" onclick="send(this)">2</button></td>
+        <td><button value="3" onclick="send(this)">3</button></td>
+        <td><button value="*" onclick="send(this)">*</button></td>
+      </tr>
+      <tr>
+        <td><button value="%" onclick="send(this)">%</button></td>
+        <td><button value="0" onclick="send(this)">0</button></td>
+        <td><button value="clear" onclick="send(this)">Clear</button></td>
+        <td><button value="/" onclick="send(this)">/</button></td>
+      </tr>
+    </table>
+  </body>
+</html>

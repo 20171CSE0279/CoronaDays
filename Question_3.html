@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--3. Write javascript program to choose your favourite color . Alert dialog box should display color chosen by user.-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 3</title>
+    <script type="text/javascript">
+    function start(radio) {
+      alert("You have chosen "+radio.value+" color");
+    }
+    </script>
+  </head>
+  <body>
+    <h4>3. Write javascript program to choose your favourite color . Alert dialog box should display color chosen by user.</h4>
+    <input type="radio" name="rad" value="Red" onchange="start(this)">Red
+    <input type="radio" name="rad" value="Blue" onchange="start(this)">Blue
+    <input type="radio" name="rad" value="Green" onchange="start(this)">Green
+    <input type="radio" name="rad" value="Yellow" onchange="start(this)">Yellow
+  </body>
+</html>

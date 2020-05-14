@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--2. Create an online registration page for university inter college cultural fest . Registration page includes participant roll no, name, 
+phone number, email id ,list of events (onstage events , off stage events, sports)-drop down menu, college name and address, mode of
+ payment for participation(debitcard, creditcard, netbanking, phonepay, gpay). Data entry for all fields are mandatory.-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 2</title>
+    <style media="screen">
+      h4 {
+        font-family: Verdana;
+      }
+      table {
+        font-family: Candara;
+        width: 700px;
+        background-color: #78E5F3;
+        margin: auto;
+      }
+      td {
+        text-align: center;
+        font-size:30px;
+        padding: 20px 10px;
+      }
+      .left {
+        text-align: left;
+      }
+      .right {
+        width: 300px;
+        text-align: right;
+      }
+      .middle {
+        width: 200px;
+        text-align: left;
+      }
+      .drop-down {
+        font-size: 25px;
+      }
+      input {
+        font-size: 20px;
+        required;
+        line-height: 40px;
+      }
+      .radio {
+        text-align: left;
+        font-size: 25px;
+      }
+      .sub {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <h4>2. Create an online registration page for university inter college cultural fest . Registration page includes participant roll no, name, phone number, email id ,list of events (onstage events , off stage events, sports)-drop down menu, college name and address, mode of payment for participation(debitcard, creditcard, netbanking, phonepay, gpay). Data entry for all fields are mandatory.</h4>
+    <h1><center>University-inter College Cultural Fest</center></h1>
+    <h1><center>Registration</center></h1>
+    <form>
+    <table>
+      <tr>
+        <td class="right">Roll no:</td>
+        <td class="left"><input type="text" required></td>
+      </tr>
+      <tr>
+        <td class="right">Name:</td>
+        <td class="left"><input type="text" required></td>
+      </tr>
+      <tr>
+        <td class="right">Phone no:</td>
+        <td class="left"><input type="number" required></td>
+      </tr>
+      <tr>
+        <td class="right">Email Id:</td>
+        <td class="left"><input type="email" required></td>
+      </tr>
+      <tr>
+        <td class="right">Roll no:</td>
+        <td class="left"><input type="text" required></td>
+      </tr>
+      <tr>
+        <td class="right">List of events:</td>
+        <td class="middle">On-Stage Events</td>
+        <td class="left"><select class="drop-down" required><option value=""></option>
+        <option>A</option><option>B</option><option>C</option><option>D</option>
+        </select><td>
+      </tr>
+      <tr>
+        <td class="right"></td>
+        <td class="middle">Off-Stage Events</td>
+        <td class="left"><select class="drop-down" required><option value=""></option>
+        <option>A</option><option>B</option><option>C</option><option>D</option>
+        </select><td>
+      </tr>
+      <tr>
+        <td class="right"></td>
+        <td class="middle">Sports Events</td>
+        <td class="left"><select class="drop-down" required><option value=""></option>
+        <option>A</option><option>B</option><option>C</option><option>D</option>
+        </select><td>
+      </tr>
+      <tr>
+        <td class="right">College Name:</td>
+        <td class="left"><input type="text" required></td>
+      </tr>
+      <tr>
+        <td class="right" valign="top">College Address:</td>
+        <td class="left"><textarea rows="8" cols="30" required></textarea></td>
+      </tr>
+      <tr>
+        <td class="right">Mode of Payment:</td>
+        <td class="radio"><input type="radio" name="rad" required>Debit-card<br><input type="radio" name="rad">Credit-card <br><input type="radio" name="rad">NetBanking<br><input type="radio" name="rad">Gpay<br><input type="radio" name="rad">PhonePay</td>
+      </tr>
+      <tr>
+        <td style="text-align:right;"><input type="submit" class="sub"></td>
+      </tr>
+    </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--4. Write a JavaScript program to calculate the volume of a sphere.-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 4</title>
+    <script type="text/javascript">
+    function start() {
+      var r= document.getElementById("radius").value;
+      v= ((4/3)*3.14*(r*r*r)).toFixed(2);
+      document.getElementById("volume").value=v;
+    }
+    </script>
+  </head>
+  <body>
+    <h4>4. Write a JavaScript program to calculate the volume of a sphere.</h4>
+    <table>
+      <tr>
+        <td>Radius</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="radius" value=""></td>
+      </tr>
+      <tr>
+        <td>Volume</td>
+      </tr>
+      <tr>
+        <td><input type="text" id="volume" value=""></td>
+      </tr>
+      <tr>
+        <td><input type="button" id="solve" value="Calculate" onclick="start()"></td>
+      </tr>
+    </table>
+  </body>
+</html>
