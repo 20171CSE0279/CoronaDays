@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Text rises on mouseover</title>
+		<script type="text/javascript">	
+			var topLayer="layer3";
+			function stack(toTop)
+			{
+				var oldTop=document.getElementById(topLayer).style;
+				var newTop=document.getElementById(toTop).style;
+				oldTop.zIndex="0"
+				newTop.zIndex="10";
+				topLayer=document.getElementById(toTop).id;
+			}
+		</script>
+		<style>
+			.layer1style
+			{
+				border:solid thick black;
+				padding:1em;
+				width:500px;
+				background-color:pink;
+				position:absolute;
+				top:100px;
+				left:200px;
+			}
+			.layer2style
+			{
+				border:solid thick black;
+				padding:1em;
+				width:500px;
+				background-color:yellow;
+				position:absolute;
+				top:120px;
+				left:220px;
+			}
+			.layer3style
+			{
+				border:solid thick black;
+				padding:1em;
+				width:500px;
+				background-color:green;
+				position:absolute;
+				top:140px;
+				left:240px;
+			}
+		</style>
+	</head>
+	<body bgcolor="orange">
+		<h3 style="text-align:center">program to demonstrate</h3>
+		<div class="container">
+		<div class="layer1Style" id="layer1" onmouseover="stack('layer1')">
+		Your success and happiness depend upon your own self.No one person can shape the life of another.Think for your self and have a plan of life.
+		</div>
+		<div class="layer2Style" id="layer2" onmouseover="stack('layer2')">
+		Don't take rest until GOOD becomes BETTER BETTER becomes BEST work hard when others take rest.Then success will be your guest.
+		</div>
+		<div class="layer3Style" id="layer3" onmouseover="stack('layer3')">
+		When you get a big dream,get busy on it.the same god who gave you the big dream in the first place will give you the little pieces to make that big dream a reality.
+		</div>
+		</div>
+	</body>
+</html>
